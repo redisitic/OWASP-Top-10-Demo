@@ -17,7 +17,7 @@ router.get('/fetch', async (req, res) => {
 router.get('/fetch-secure', async (req, res) => {
     const url = req.query.url;
     if (!url) return res.status(400).send('Missing url parameter');
-    const allowedDomains = ['example.com'];
+    const allowedDomains = ['example.com', 'api.thecatapi.com'];
   
     try {
       const parsedUrl = new URL(url);
